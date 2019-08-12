@@ -69,7 +69,7 @@ for i in range(1, num_dataset+1):
     # finding accuracy on test data
     Z = np.multiply(np.dot(X_test, W), Y_test)
     num_misclassified = np.argwhere(Z <= 0).reshape(-1).shape[0]
-    accuracy = round(100 * (1 - num_misclassified/Y_test.shape[0]),2)
+    accuracy = round(100 * (1 - num_misclassified/Y_test.shape[0]), 2)
 
     print("Count: {}\nMisclassified: {}\nAccuracy: {}%"
           .format(Y_test.shape[0], num_misclassified, accuracy))
